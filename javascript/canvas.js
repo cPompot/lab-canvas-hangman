@@ -18,7 +18,7 @@ class HangmanCanvas {
     {
       this.context.beginPath();
       this.context.strokeStyle = 'black';
-      this.context.lineWidth = 5;
+      this.context.lineWidth = 3;
       this.context.moveTo(100,100); // 1.need to write :moveTo first! default pen (0,0)
       this.context.lineTo(300,100);
       this.context.stroke();
@@ -32,12 +32,37 @@ class HangmanCanvas {
   writeWrongLetter(letter, errorsLeft) {
     // ... your code goes here
   }
+  //const draw = ['hanger'];
+
+  
 
   drawHangman(errorsLeft) {
-    // ... your code goes here
+//        switch(draw){
+ //       case 'hanger':
+          this.context.strokeStyle = 'blue';
+          this.context.lineWidth = 3;
+          this.context.beginPath();
+          this.context.beginPath();
+          this.context.moveTo(300, 500);
+          this.context.lineTo(20, 500);
+          this.context.moveTo(40, 500);
+          this.context.lineTo(25, 5);
+          this.context.lineTo(100, 5);
+          this.context.lineTo(100, 25);
+          this.context.stroke();
+   //       break;
+     //     case 'head': 
+          this.context.lineWidth = 5;
+          this.context.beginPath();
+          this.context.arc(100, 50, 25, 0, Math.PI*2, true);
+          this.context.closePath();
+          this.context.stroke();
+       //  break;
   }
+    // ... your code goes here
 
-  //Bonus
+
+
   gameOver() {
     // ... your code goes here
   }
