@@ -5,15 +5,28 @@ class HangmanCanvas {
   }
 
   createBoard() {
-    // ... your code goes here
+    const myCanvas = document.getElementById('hangman');
+    //this.context.clearRect(0, 0, 1200, 800); //Canvas (width, height)
+    this.context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+    this.drawLines();
+   // ... your code goes here
   }
 
   drawLines() {
-    // ... your code goes here
+    //souligner les lettres
+    for (let i = 0; i < hangman.secretWord.length; i++)
+    {
+      this.context.beginPath();
+      this.context.strokeStyle = 'black';
+      this.context.lineWidth = 5;
+      this.context.moveTo(100,100); // 1.need to write :moveTo first! default pen (0,0)
+      this.context.lineTo(300,100);
+      this.context.stroke();
+    }
   }
 
   writeCorrectLetter(index) {
-    // ... your code goes here
+    // ... your code goes herew
   }
 
   writeWrongLetter(letter, errorsLeft) {
@@ -24,6 +37,7 @@ class HangmanCanvas {
     // ... your code goes here
   }
 
+  //Bonus
   gameOver() {
     // ... your code goes here
   }
@@ -32,3 +46,4 @@ class HangmanCanvas {
     // ... your code goes here
   }
 }
+
